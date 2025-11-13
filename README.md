@@ -1,14 +1,9 @@
 # Playphone Round 4
 
-This is a Game made for the fourth round of #playphone on the Hack Club Slack! Playphone is a community made game where others will contribute to this game in rounds, and at the end of it all, we will have an extremely polished game.
+This is a Game made for the fifth round of #playphone on the Hack Club Slack! Playphone is a community made game where others will contribute to this game in rounds, and at the end of it all, we will have an extremely polished game.
 
-- fixed the controls (aka WASD works now)
-- made the game work with a controller (hopefully)
-- added a dash (press E or C)
-- made a silly trail for the dash
-- added coyote time
-- smashed all of the warnings
-- some more random fixes
+- added level select screen
+- improved level one and started on level two
 
 <img width="1133" height="634" alt="image" src="https://github.com/user-attachments/assets/541dd651-7f73-4895-957b-c11459cc1edb" />
 <img width="1140" height="643" alt="image" src="https://github.com/user-attachments/assets/f14b62c8-1b5b-4eb9-b51a-55165ab55978" />

@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 @export var boostStrength: float = 700.0;
 @export var coyoteTime: float = 0.2;
-const SPEED = 300.0;
-const JUMP_VELOCITY = -400.0;
+const SPEED = 250.0;
+const JUMP_VELOCITY = -300.0;
 const DASH_VELOCITY = 400;
 const DEATH_Y = 100;
 var coyoteTimer = coyoteTime;

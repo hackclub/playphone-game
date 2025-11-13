@@ -3,7 +3,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var _new_scene = preload("res://Levels/Level1.tscn").instantiate()
+	var _new_scene_1 = preload("res://Levels/Level1.tscn").instantiate()
 	$Level.set_scene("res://Levels/Level1.tscn")
 
 
