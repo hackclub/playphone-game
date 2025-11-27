@@ -15,6 +15,10 @@ run/main_scene="uid://cs4r0dee3xtt7"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Globals="*res://scripts/globals.gd"
+
 [display]
 
 window/size/borderless=true
