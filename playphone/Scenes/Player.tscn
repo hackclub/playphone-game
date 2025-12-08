@@ -70,6 +70,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
+z_index = -10
 scale = Vector2(3.04661, 3.04661)
 texture = ExtResource("2_kne1u")
 
