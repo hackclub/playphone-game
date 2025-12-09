@@ -21,7 +21,6 @@ func _on_body_exited(body):
 	if body is CharacterBody2D:
 		b = null
 
-
 func _process(_delta: float) -> void:
 	if b != null:
 		b.velocity.y = -boost_strength
