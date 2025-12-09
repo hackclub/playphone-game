@@ -12,8 +12,10 @@ var b = null
 
 
 func _on_body_entered(_body):
-	get_tree().change_scene_to_file("res://Scenes/end.tscn")
+	call_deferred("_go_to_end")
 
+func _go_to_end():
+	get_tree().change_scene_to_file("res://Scenes/end.tscn")
 
 func _on_body_exited(body):
 	if body is CharacterBody2D:
