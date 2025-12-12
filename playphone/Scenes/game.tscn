@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvh37p3hucyx6"]
+[gd_scene load_steps=8 format=3 uid="uid://cvh37p3hucyx6"]
 
 [ext_resource type="PackedScene" uid="uid://bbdx7p46w74iw" path="res://Scenes/Player.tscn" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://4yixwpcfgn7u" path="res://scripts/game.gd" id="1_feb5d"]
 [ext_resource type="AudioStream" uid="uid://d2wavvs6g732d" path="res://Assets/music n sounds/SpotiDownloader.com - am i overreacting - hkmori.mp3" id="2_fc0e3"]
 [ext_resource type="Script" uid="uid://fuf55ulbsxc7" path="res://scripts/level.gd" id="3_fc0e3"]
+[ext_resource type="AudioStream" uid="uid://cwq1dgec87ots" path="res://Assets/music n sounds/sixseven.mp3" id="4_i6g32"]
 [ext_resource type="Script" uid="uid://cdsom5vmyw5ia" path="res://Scenes/timer.gd" id="5_wowpa"]
 
 [sub_resource type="SystemFont" id="SystemFont_i6g32"]
@@ -19,6 +20,9 @@ autoplay = true
 parameters/looping = true
 
 [node name="Player" parent="." instance=ExtResource("1_80nbo")]
+
+[node name="sixseven" type="AudioStreamPlayer" parent="Player"]
+stream = ExtResource("4_i6g32")
 
 [node name="Level" type="Node2D" parent="."]
 script = ExtResource("3_fc0e3")

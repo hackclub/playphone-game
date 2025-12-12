@@ -18,6 +18,21 @@ func death():
 	if spawn:
 		global_position = spawn.global_position
 
+# who up rotting they brain rn
+var sixsevendetector: Array[int] = []
+var brainrotcombo: Array[int] = [KEY_6, KEY_7]
+@onready var sixsevensound = $sixseven
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed:
+		sixsevendetector.append(event.keycode)
+
+		if sixsevendetector.size() > brainrotcombo.size():
+			sixsevendetector.pop_front()
+
+		if sixsevendetector == brainrotcombo:
+			sixsevensound.play()
+			sixsevendetector.clear()
 
 func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
