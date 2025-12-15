@@ -18,3 +18,27 @@ func _ready() -> void:
 	var slider_value = inverse_lerp(-40.0, 0.0, current_db) * 100.0
 	$Volume.value = slider_value
 	$volume_label.text = "Volume (" + str(int(slider_value)) + "%)"
+
+var besttimes := ConfigFile.new()
+
+var eraseDb := false
+@onready var OgButtonText = $Settings/Panel/Button2.text
+@onready var DeleteTextTimer = $Settings/Panel/Button2/texttimer
+
+func _on_button_2_pressed() -> void:
+	if eraseDb:
+		return
+
+	eraseDb = true
+
+	var err = besttimes.load("user://scores.cfg")
+	if err == OK:
+		besttimes.clear()
+		besttimes.save("user://scores.cfg")
+
+	$Settings/Panel/Button2.text = "Erased!"
+	DeleteTextTimer.start()
+	await DeleteTextTimer.timeout
+	$Settings/Panel/Button2.text = OgButtonText
+
+	eraseDb = false

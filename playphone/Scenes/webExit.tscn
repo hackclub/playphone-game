@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwx48ymysru1v"]
+
+[ext_resource type="Texture2D" uid="uid://cfepuymkj04pg" path="res://Assets/itssafe.webp" id="1_4y28s"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Itssafe" type="Sprite2D" parent="."]
+position = Vector2(599, 375)
+scale = Vector2(2.497598, 3.1558933)
+texture = ExtResource("1_4y28s")
