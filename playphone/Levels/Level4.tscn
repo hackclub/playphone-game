@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://c715vcsaasu7j"]
+[gd_scene load_steps=15 format=4 uid="uid://c715vcsaasu7j"]
 
 [ext_resource type="TileSet" uid="uid://bb88cfywp7g2" path="res://Assets/Tiles/tileset.tres" id="1_2qv2g"]
 [ext_resource type="Script" uid="uid://b88vufhnynlik" path="res://scripts/goal.gd" id="2_0sogr"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://oi8xwxwhrvse" path="res://Assets/Background Objects/key.png" id="6_5brs8"]
 [ext_resource type="Texture2D" uid="uid://bf0xwmhsis0bg" path="res://Assets/door.png" id="7_qgpl5"]
 [ext_resource type="Texture2D" uid="uid://c2r0pyty527on" path="res://Assets/Background Objects/gothatway.png" id="8_vgbee"]
+[ext_resource type="Texture2D" uid="uid://bb3p1s5re87lt" path="res://Assets/Background Objects/Bush3.png" id="9_v72e1"]
+[ext_resource type="Texture2D" uid="uid://bi8mn3lxr1l8s" path="res://Assets/Background Objects/Flower 1.png" id="10_so18s"]
 
 [sub_resource type="GDScript" id="GDScript_w77jt"]
 script/source = "extends Node2D
@@ -108,5 +110,13 @@ texture = ExtResource("7_qgpl5")
 position = Vector2(-1012, -408)
 scale = Vector2(0.3828125, 0.3828125)
 texture = ExtResource("8_vgbee")
+
+[node name="Bush3" type="Sprite2D" parent="."]
+position = Vector2(-1678, -362)
+texture = ExtResource("9_v72e1")
+
+[node name="Flower1" type="Sprite2D" parent="."]
+position = Vector2(-1466, -357)
+texture = ExtResource("10_so18s")
 
 [connection signal="body_entered" from="KeyArea" to="." method="_on_key_area_body_entered"]
