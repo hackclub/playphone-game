@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ch0prb4y2em7d"]
+[gd_scene load_steps=13 format=3 uid="uid://ch0prb4y2em7d"]
 
 [ext_resource type="Texture2D" uid="uid://cb3dsuaffaivm" path="res://Assets/icons_xbox_without_outline_colored.png" id="1_k4nhr"]
 [ext_resource type="Texture2D" uid="uid://gsvvmb7jp2g3" path="res://Assets/image-removebg-preview(2).png" id="2_21kh3"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bm03n1t74k1ot" path="res://Assets/image-removebg-preview(5).png" id="6_miyui"]
 [ext_resource type="Script" uid="uid://0awo4f8wny38" path="res://Scenes/continue.gd" id="7_21kh3"]
 [ext_resource type="AudioStream" uid="uid://bsmr6go2irc3q" path="res://Assets/Elevator Music 4.mp3" id="8_f0kct"]
+[ext_resource type="Texture2D" uid="uid://08mrvfkj572" path="res://Assets/E.jpg" id="9_pwth0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_au1p5"]
 bg_color = Color(0.567999, 0.518859, 0.733051, 1)
@@ -109,6 +110,18 @@ text = "Controls"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = -51.0
+offset_top = 99.0
+offset_right = 487.0
+offset_bottom = 215.0
+theme_override_fonts/font = ExtResource("4_pwth0")
+theme_override_font_sizes/font_size = 40
+text = "- Dash"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Image-removebg-preview(4)" type="Sprite2D" parent="."]
 position = Vector2(877, 151.375)
 scale = Vector2(0.725424, 0.673168)
@@ -152,5 +165,10 @@ script = ExtResource("7_21kh3")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_f0kct")
 autoplay = true
+
+[node name="E" type="Sprite2D" parent="."]
+position = Vector2(102.00001, 158)
+scale = Vector2(0.2979912, 0.2979911)
+texture = ExtResource("9_pwth0")
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

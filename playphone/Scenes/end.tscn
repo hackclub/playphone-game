@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxu5wywqshlay"]
+[gd_scene load_steps=5 format=3 uid="uid://dxu5wywqshlay"]
 
 [ext_resource type="Script" uid="uid://siu2p2gj0yl4" path="res://Scenes/quit.gd" id="1_5j2cu"]
 [ext_resource type="AudioStream" uid="uid://bbdhguyxfnyby" path="res://Assets/Congrats - Tyler, the Creator.mp3" id="2_xmt8n"]
+[ext_resource type="Script" uid="uid://kqxxjovor78s" path="res://Scenes/endtime.gd" id="3_02kpm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xmt8n"]
 bg_color = Color(0.637611, 0.54918, 0.788611, 1)
@@ -22,16 +23,25 @@ theme_override_font_sizes/font_size = 50
 text = "You straight up playphoned it"
 
 [node name="quit" type="Button" parent="."]
-offset_left = 514.0
-offset_top = 322.0
-offset_right = 618.0
-offset_bottom = 399.0
+offset_left = 389.0
+offset_top = 336.0
+offset_right = 735.0
+offset_bottom = 413.0
 theme_override_font_sizes/font_size = 50
-text = "quit"
+text = "Back To Menu"
 script = ExtResource("1_5j2cu")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_xmt8n")
 autoplay = true
+
+[node name="endtime" type="Label" parent="."]
+offset_left = 218.0
+offset_top = 228.0
+offset_right = 414.0
+offset_bottom = 278.0
+theme_override_font_sizes/font_size = 36
+text = "Your Time: "
+script = ExtResource("3_02kpm")
 
 [connection signal="pressed" from="quit" to="quit" method="_on_pressed"]

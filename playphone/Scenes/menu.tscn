@@ -83,6 +83,7 @@ text = "quit
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_cayip")
 autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="options" to="." method="_on_options_pressed"]

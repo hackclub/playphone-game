@@ -1,73 +1,161 @@
-[gd_scene load_steps=4 format=3 uid="uid://b71ncatkusv7y"]
+[gd_scene load_steps=17 format=3 uid="uid://b71ncatkusv7y"]
 
-[ext_resource type="Script" uid="uid://fwcc8g5qsnfd" path="res://settings.gd" id="1_4geyq"]
-[ext_resource type="AudioStream" uid="uid://dnfttlrne5kcn" path="res://Assets/THE NEPTUNES - PHARRELL - FRONTIN' (BRIDGE LOOP).mp3" id="2_i44u3"]
+[ext_resource type="Script" uid="uid://bcpa4hjtwjj3b" path="res://Scenes/settings.gd" id="1_4geyq"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i44u3"]
-bg_color = Color(0.786705, 0.485044, 0.68921, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4geyq"]
+bg_color = Color(0.9104825, 0.7380532, 0.7985285, 1)
 
-[node name="Settings" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 9.0
-offset_top = 19.0
-offset_right = -1014.0
-offset_bottom = -491.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.54841, 4.54808)
+[sub_resource type="DPITexture" id="DPITexture_4geyq"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".75\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="DPITexture" id="DPITexture_i44u3"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="DPITexture" id="DPITexture_lhmql"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".37\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="DPITexture" id="DPITexture_aaqfp"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"4\" height=\"8\"><path fill=\"#fff\" fill-opacity=\".25\" d=\"M1 0h2v16H1z\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_i44u3"]
+color = Color(0, 0, 0, 0.2627451)
+grow_begin = 0.0
+thickness = 36
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aaqfp"]
+bg_color = Color(0.6805639, 0.5259063, 0.7951901, 1)
+
+[sub_resource type="DPITexture" id="DPITexture_j2dne"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".75\" rx=\"2.333\"/><path fill=\"#1a1a1a\" d=\"m11.5 3.75-5.6 5.6-1.7-1.7-1.5 1.5 3.2 3.2 7.1-7.1z\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="DPITexture" id="DPITexture_6kysc"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" fill-opacity=\".5\" rx=\"2.333\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="DPITexture" id="DPITexture_6vr2p"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"5.5\" fill=\"#1a1a1a\" stroke=\"#fff\" stroke-opacity=\".75\" stroke-width=\"3\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="DPITexture" id="DPITexture_f60ng"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#1a1a1a\" fill-opacity=\".5\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="DPITexture" id="DPITexture_bismi"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".37\" rx=\"2.333\"/><path fill=\"#1a1a1a\" fill-opacity=\".5\" d=\"m11.5 3.75-5.6 5.6-1.7-1.7-1.5 1.5 3.2 3.2 7.1-7.1z\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="DPITexture" id="DPITexture_rgw85"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><rect width=\"14\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" fill-opacity=\".25\" rx=\"2.333\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="DPITexture" id="DPITexture_l7vst"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fff\" fill-opacity=\".37\"/><circle cx=\"8\" cy=\"8\" r=\"4\" fill=\"#1a1a1a\" fill-opacity=\".5\"/></svg>
+"
+base_scale = 3.0
+
+[sub_resource type="DPITexture" id="DPITexture_35cvv"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#1a1a1a\" fill-opacity=\".25\"/></svg>
+"
+base_scale = 3.0
+
+[node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_4geyq")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Settings" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1153.0
+offset_bottom = 652.0
+
+[node name="Panel" type="Panel" parent="Settings"]
 layout_mode = 0
-offset_left = -3.0
-offset_top = -4.0
-offset_right = 448.0
-offset_bottom = 139.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_i44u3")
+offset_right = 1154.0
+offset_bottom = 650.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4geyq")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -34.0
-offset_top = -39.0
-offset_right = 194.0
-offset_bottom = 79.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
-layout_mode = 2
-
-[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="volume_label" type="Label" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Volume"
-
-[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Mute"
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_i44u3")
-autoplay = true
-
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="Settings/Panel"]
 layout_mode = 0
-offset_left = 308.035
-offset_top = 82.6723
-offset_right = 422.035
-offset_bottom = 113.672
+offset_left = 716.0
+offset_top = 515.0
+offset_right = 1125.3905
+offset_bottom = 601.0
+theme_override_font_sizes/font_size = 57
 text = "Take me back"
 
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_h_slider_value_changed"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Button2" type="Button" parent="Settings/Panel"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 599.0
+offset_right = 311.0
+offset_bottom = 638.0
+theme_override_font_sizes/font_size = 22
+text = "Delete Personal Best Times"
+
+[node name="texttimer" type="Timer" parent="Settings/Panel/Button2"]
+one_shot = true
+
+[node name="Volume" type="HSlider" parent="."]
+offset_left = 41.0
+offset_top = 243.0
+offset_right = 343.0
+offset_bottom = 294.0
+theme_override_icons/grabber = SubResource("DPITexture_4geyq")
+theme_override_icons/grabber_highlight = SubResource("DPITexture_i44u3")
+theme_override_icons/grabber_disabled = SubResource("DPITexture_lhmql")
+theme_override_icons/tick = SubResource("DPITexture_aaqfp")
+theme_override_styles/slider = SubResource("StyleBoxLine_i44u3")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_aaqfp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_aaqfp")
+
+[node name="volume_label" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 176.0
+offset_right = 612.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 46
+text = "Volume"
+
+[node name="settingslabel" type="Label" parent="."]
+offset_left = 32.0
+offset_top = -10.0
+offset_right = 603.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 141
+text = "Settings"
+
+[node name="Mute" type="CheckBox" parent="."]
+offset_left = 36.0
+offset_top = 288.0
+offset_right = 212.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 46
+theme_override_icons/checked = SubResource("DPITexture_j2dne")
+theme_override_icons/unchecked = SubResource("DPITexture_6kysc")
+theme_override_icons/radio_checked = SubResource("DPITexture_6vr2p")
+theme_override_icons/radio_unchecked = SubResource("DPITexture_f60ng")
+theme_override_icons/checked_disabled = SubResource("DPITexture_bismi")
+theme_override_icons/unchecked_disabled = SubResource("DPITexture_rgw85")
+theme_override_icons/radio_checked_disabled = SubResource("DPITexture_l7vst")
+theme_override_icons/radio_unchecked_disabled = SubResource("DPITexture_35cvv")
+text = "Mute"
+
+[connection signal="pressed" from="Settings/Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Settings/Panel/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="Settings/Panel/Button2/texttimer" to="." method="_on_texttimer_timeout"]
+[connection signal="value_changed" from="Volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="Mute" to="." method="_on_mute_toggled"]

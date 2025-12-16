@@ -1,9 +1,34 @@
-[gd_scene load_steps=15 format=3 uid="uid://bbdx7p46w74iw"]
+[gd_scene load_steps=25 format=3 uid="uid://bbdx7p46w74iw"]
 
 [ext_resource type="Script" uid="uid://dxwteod6dxva6" path="res://scripts/player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://dukkk0mvxfjsw" path="res://Assets/Backgrounds/sky.png" id="2_kne1u"]
 [ext_resource type="Texture2D" uid="uid://yevns311qfnb" path="res://Assets/Triste/Hands/spr_Triste_walk_strip4.png" id="2_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://btyeajd75g27g" path="res://Assets/Triste/Hands/spr_Triste_crouch.png" id="3_52ee3"]
+[ext_resource type="Texture2D" uid="uid://cv8ifrmgyhrwh" path="res://Assets/Triste/Hands/spr_Triste_fall.png" id="4_bhhdu"]
 [ext_resource type="Script" uid="uid://csd8tukgx7ghv" path="res://Scenes/line_2d.gd" id="4_dewec"]
+[ext_resource type="Texture2D" uid="uid://cpc6frc1fcqad" path="res://Assets/Triste/Hands/spr_Triste_attack_strip3.png" id="4_megsn"]
+[ext_resource type="Texture2D" uid="uid://cbgq7xixdppyu" path="res://Assets/Triste/Hands/spr_Triste_idle_2_strip2.png" id="5_bhhdu"]
+[ext_resource type="Texture2D" uid="uid://cyn27esqm5lxi" path="res://Assets/Triste/Hands/spr_Triste_jump.png" id="5_megsn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksbbd"]
+atlas = ExtResource("4_megsn")
+region = Rect2(0, 0, 24, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glx4g"]
+atlas = ExtResource("4_megsn")
+region = Rect2(24, 0, 24, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miouo"]
+atlas = ExtResource("4_megsn")
+region = Rect2(48, 0, 24, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_megsn"]
+atlas = ExtResource("5_bhhdu")
+region = Rect2(0, 0, 24, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yoq75"]
+atlas = ExtResource("5_bhhdu")
+region = Rect2(24, 0, 24, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kne1u"]
 atlas = ExtResource("2_kpjcp")
@@ -25,6 +50,55 @@ region = Rect2(72, 0, 24, 33)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("3_52ee3")
+}],
+"loop": true,
+"name": &"crouch",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksbbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glx4g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miouo")
+}],
+"loop": false,
+"name": &"dash",
+"speed": 1.7
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bhhdu")
+}],
+"loop": true,
+"name": &"fall",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_megsn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yoq75")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 0.33
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_megsn")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_kne1u")
 }, {
 "duration": 1.0,
@@ -41,14 +115,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5ixxa"]
-height = 38.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_megsn"]
+size = Vector2(19.832186, 32.12564)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nn08x"]
-size = Vector2(20, 14)
+size = Vector2(19.709417, 14)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gntrk"]
-height = 38.0
+height = 33.379753
 
 [sub_resource type="Curve" id="Curve_dewec"]
 _data = [Vector2(0, 0), 0.0, -0.31206265, 0, 0, Vector2(0.32608697, 0.5617978), 2.3341784, 2.3341784, 0, 0, Vector2(1, 1), 0.33078644, 0.0, 0, 0]
@@ -77,19 +151,19 @@ texture = ExtResource("2_kne1u")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5
 sprite_frames = SubResource("SpriteFrames_dtqjt")
-animation = &"walk"
-frame_progress = 0.928068
+animation = &"dash"
 speed_scale = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_5ixxa")
+position = Vector2(-0.027840614, 0.5554242)
+shape = SubResource("RectangleShape2D_megsn")
 
 [node name="BounceBox" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BounceBox"]
-position = Vector2(0, 17)
+position = Vector2(0.10288715, 10.919704)
 shape = SubResource("RectangleShape2D_nn08x")
 
 [node name="hurtbox" type="Area2D" parent="."]
@@ -109,6 +183,7 @@ end_cap_mode = 2
 antialiased = true
 script = ExtResource("4_dewec")
 
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="BounceBox" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="BounceBox" to="." method="_on_area_2d_body_entered"]
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]

@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxqkjwx16mgkf"]
+
+[ext_resource type="Script" uid="uid://fwcc8g5qsnfd" path="res://settings.gd" id="1_3kctl"]
+[ext_resource type="AudioStream" uid="uid://dnfttlrne5kcn" path="res://Assets/THE NEPTUNES - PHARRELL - FRONTIN' (BRIDGE LOOP).mp3" id="2_xbbbw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i44u3"]
+bg_color = Color(0.786705, 0.485044, 0.68921, 1)
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 19.0
+offset_right = -1014.0
+offset_bottom = -491.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.54841, 4.54808)
+script = ExtResource("1_3kctl")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -4.0
+offset_right = 448.0
+offset_bottom = 139.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i44u3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -39.0
+offset_right = 194.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="volume_label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Mute"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_xbbbw")
+autoplay = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 308.035
+offset_top = 82.6723
+offset_right = 422.035
+offset_bottom = 113.672
+text = "Take me back"
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_h_slider_value_changed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
